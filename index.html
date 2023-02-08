@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Declaración</title>
+</head>
+  <style>
+    *{
+      transition: 0.5s;
+      margin: 0;
+    }
+
+    .contenedor{
+      background: #FFC0CB;
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+    }
+
+    p{
+      font-size: xx-large;
+      padding: 15%;
+    }
+
+    button{
+      font-size: 15px;
+      width: 45px;
+      height: 35px;
+      border-radius: 20%;
+      border: 1px solid;
+      background: #ff000030;
+      z-index: 10;
+    }
+
+    #yesBtn{
+      transform: translate(-100%,0);
+    }
+
+    #noBtn{
+      position: absolute;
+    }
+  </style>
+<body>
+
+  <div class="contenedor">
+      <p class="title">¿Quieres ser mi Novia?</p>
+      <button id="yesBtn">Si</button>
+      <button id="noBtn">No</button>
+  </div>
+  
+  <script>
+    const yesBtn = document.querySelector('#yesBtn');
+
+    yesBtn.addEventListener('click',function () {
+        alert('De ahora en adelante seremos novio <3')
+    });
+    
+    const noBtn = document.querySelector('#noBtn');
+    
+    noBtn.addEventListener('click', function () {
+        const randomX = parseInt(Math.random()*100);
+        const randomY = parseInt(Math.random()*100);
+        noBtn.style.setProperty('top',randomY+'%');
+        noBtn.style.setProperty('left',randomX+'%');
+        noBtn.style.setProperty('transform',`translate(-${randomX}%,-${randomY}%)`);
+    TransitionEvent
+    })
+  </script>
+
+</body>
+</html>
